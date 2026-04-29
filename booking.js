@@ -84,7 +84,7 @@ guestCount.setCustomValidity("");
     status.className = "loading";
 
     setTimeout(() => {
-      status.textContent = "Booking submitted successfully! Our team will contact you soon for clarifications.";
+      status.textContent = "Booking submitted successfully! Our team will contact you soon for confirmation and details.";
       status.className = "success";
 
       form.reset();
