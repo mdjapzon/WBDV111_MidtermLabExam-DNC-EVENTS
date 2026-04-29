@@ -1,87 +1,151 @@
- document.getElementById('eventForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
 
-            const services = document.querySelectorAll('input[name="services"]:checked');
-            if (services.length === 0) {
-                alert("Please select at least one service.");
-                return;
-            }
+  const form = document.getElementById("eventForm");
+  const button = form.querySelector("button[type='submit']");
+  const status = document.getElementById("statusMessage");
 
-            const requiredInputs = this.querySelectorAll('input[required], select[required], textarea[required]');
-            for (const input of requiredInputs) {
-                if (!input.value) {
-                    alert("Please fill out all required fields.");
-                    input.focus();
-                    return;
-                }
-            }
+  const email = document.getElementById("email");
+  const guestCount = document.getElementById("guestCount"); 
 
-            alert("Form submitted successfully!");
-            this.reset();
-        });
+  // EMAIL VALIDATION MESSAGE
+  email.oninvalid = () => {
+    if (email.value === "") {
+      email.setCustomValidity("Please complete this field");
+    } else {
+      email.setCustomValidity("Please include a valid email address.");
+    }
+  };
 
-        document.getElementById('eventForm').addEventListener('submit', function(e) {
+  email.oninput = () => email.setCustomValidity("");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // DEFAULT VALIDATION
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    // STRICT EMAIL CHECK
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value)) {
+      email.setCustomValidity("Please include a valid email address.");
+      email.reportValidity();
+      return;
+    }
+
+    // GUEST COUNT VALIDATION
+    const guests = parseInt(guestCount.value, 10);
+
+if (isNaN(guests)) {
+  guestCount.setCustomValidity("Please enter number of guests.");
+  guestCount.reportValidity();
+  return;
+}
+
+if (guests < 20) {
+  guestCount.setCustomValidity("Minimum of 20 guests is required.");
+  guestCount.reportValidity();
+  return;
+}
+
+if (guests > 200) {
+  guestCount.setCustomValidity("Maximum of 200 guests only.");
+  guestCount.reportValidity();
+  return;
+}
+
+// reset if valid
+guestCount.setCustomValidity("");
+
+    // SERVICES CHECK
+    const services = document.querySelectorAll('input[name="services"]:checked');
+    if (services.length === 0) {
+      status.textContent = "Please select at least one service.";
+      status.className = "error";
+      return;
+    }
+
+    // PACKAGES CHECK
+    const packages = document.querySelectorAll('input[name="packages"]:checked');
+    if (packages.length === 0) {
+      status.textContent = "Please select at least one package.";
+      status.className = "error";
+      return;
+    }
+
+    // LOADING STATE
+    button.disabled = true;
+    button.textContent = "Sending...";
+    button.classList.add("loading");
+
+    status.textContent = "Sending your booking...";
+    status.className = "loading";
+
+    setTimeout(() => {
+      status.textContent = "Booking submitted successfully! Our team will contact you soon for clarifications.";
+      status.className = "success";
+
+      form.reset();
+
+      // ✅ keep disabled
+      button.disabled = true;
+
+      // ✅ change button text
+      button.textContent = "We received your event booking request.";
+      button.classList.remove("loading");
+      button.classList.add("success");
+
+    }, 1500);
+  });
+
+  const nav = document.querySelector("nav");
+const toggle = document.querySelector(".menu-toggle");
+const overlay = document.querySelector(".overlay");
+
+/* TOGGLE MENU */
+function toggleMenu() {
+    nav.classList.toggle("show");
+    overlay.classList.toggle("show");
+}
+
+/* CLICK ☰ */
+toggle.addEventListener("click", toggleMenu);
+
+/* CLICK OUTSIDE */
+overlay.addEventListener("click", () => {
+    nav.classList.remove("show");
+    overlay.classList.remove("show");
+});
+
+/* CLICK LINKS */
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("show");
+        overlay.classList.remove("show");
+    });
+});
+const boxes = document.querySelectorAll(".contact-box");
+
+boxes.forEach(box => {
+    box.addEventListener("click", (e) => {
         e.preventDefault();
 
-        const services = document.querySelectorAll('input[name="services"]:checked');
-        const packages = document.querySelectorAll('input[name="packages"]:checked');
+        // close others
+        boxes.forEach(b => {
+            if (b !== box) b.classList.remove("active");
+        });
 
-        if (services.length === 0) {
-            alert("Please select at least one service.");
-            return;
-        }
-
-        if (packages.length === 0) {
-            alert("Please select at least one package.");
-            return;
-        }
-
-        const requiredInputs = this.querySelectorAll('input[required], select[required], textarea[required]');
-        for (const input of requiredInputs) {
-            if (!input.value) {
-                alert("Please fill out all required fields.");
-                input.focus();
-                return;
-            }
-        }
-
-        alert("Form submitted successfully!");
-        this.reset();
+        // toggle clicked one
+        box.classList.toggle("active");
     });
+});
+const dateInput = document.getElementById("eventDate");
 
+const today = new Date();
+const year = today.getFullYear();
 
-
-    // eto dinagdag ko para pwede ma cancel kapag na select mo na yung sa package
-    const packageRadios = document.querySelectorAll('input[name="packages"]');
-
-        packageRadios.forEach(radio => {
-            radio.addEventListener('click', function() {
-                // kung naka-check na, i-deselect
-                if (this.wasChecked) {
-                    this.checked = false;
-                }
-                // i-track ang estado
-                packageRadios.forEach(r => r.wasChecked = r.checked);
-            });
-        });
-
-        
-        const backToTop = document.getElementById("back-to-top");
-
-            // Show button after scrolling down 300px
-        window.addEventListener("scroll", () => {
-             if (window.scrollY > 300) {
-        backToTop.style.display = "block";
-        } else {
-                  backToTop.style.display = "none";
-           }
-        });
-
-           // Scroll smoothly to top on click
-        backToTop.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-        document.getElementById("back-to-top").addEventListener("click", function(e) {
-        e.preventDefault();  // prevents the default jump
-        window.scrollTo({ top: 0, behavior: "smooth" }); // smooth scroll to top
-        });
+dateInput.min = `${year}-01-01`;
+dateInput.max = `${year + 10}-12-31`;
+});
