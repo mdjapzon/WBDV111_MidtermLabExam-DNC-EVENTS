@@ -8,6 +8,9 @@
     <link rel="icon" href="images/DNC EVENTS LOGO.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet" >
     <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="phoneresponsive.css">
+    <link rel="stylesheet" href="tabletresponsive.css">
+
 
 </head>
 <body>
@@ -18,12 +21,12 @@
         <div class="logo">
             <img src="images/DNC EVENTS LOGO.png" alt="">
         </div>
-
+        <div class="menu-toggle" id="menu-toggle">☰</div>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
         <div class="dropdown">
-           <a href="#" class="dropbtn">Catering</a>
+           <a class="dropbtn">Catering</a>
         <div class="dropdown-content">
             <a href="services.html">Services</a>
             <a href="packages.html">Packages</a>
@@ -35,6 +38,8 @@
             <a href="booking.html">Booking</a>
         </nav>
     </header>
+
+    <div class="overlay"></div>
 
     <!-- HERO -->
 
@@ -57,7 +62,7 @@
                 <!-- Full Name -->
                 <div class="form-group">
                     <label for="name">FULL NAME *</label>
-                    <input type="text" id="name" placeholder="Enter your name" required
+                    <input type="text" id="name" placeholder="Enter Your Name" required
                         oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
                 </div>
 
@@ -65,7 +70,7 @@
                 <div class="row">
                     <div class="form-group">
                         <label for="email">EMAIL ADDRESS *</label>
-                        <input type="email" id="email" placeholder="Email Address" required>
+                        <input type="email" id="email" placeholder="Enter Your @email.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                     </div>
                     <div class="form-group">
                         <label for="phone">PHONE NUMBER *</label>
@@ -101,12 +106,12 @@
                     </div>
                     <div class="form-group">
                         <label for="guestCount">GUEST COUNT *</label>
-                        <input type="number" id="guestCount" placeholder="Guest Count" min="1" required>
+                        <input type="number" id="guestCount" placeholder="Guest Count" min="20" max="200" required>
                     </div>
                 </div>
 
                 <!-- Services -->
-                <div class="services">
+                <div class="servicess">
                     <p class="services-title">SERVICES NEEDED *</p>
                     <div class="services-grid">
                         <label class="service-box">
@@ -346,14 +351,30 @@
 
                 <!-- Submit Button -->
                 <button type="submit">Send Inquiry</button>
+                <p id="statusMessage"></p>
             </form>
 
             <!-- Contact Section -->
-            <div class="contact">
-                <div>📞<br>Call Us</div>
-                <div>✉️<br>Email Us</div>
-                <div>📍<br>Visit Us</div>
-            </div>
+          <div class="contact">
+
+    <a href="#" class="contact-box" data-type="phone">
+        📞<br>Call Us
+        <div class="contact-popup">0956 251 3213</div>
+    </a>
+
+    <a href="#" class="contact-box" data-type="email">
+        ✉️<br>Email Us                         
+        <div class="contact-popup">dncevents@gmail.com</div>
+    </a>
+
+    <a href="#" class="contact-box" data-type="location">
+        📍<br>Visit Us
+        <div class="contact-popup">
+             L. Wood St,  Javier Compound, 1920, Taytay, Rizal</div>
+    </a>
+
+</div>
+    </div>
         </div>
     </div>
 
