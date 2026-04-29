@@ -229,38 +229,35 @@
     /* ================= SWIPE CONTAINER ABOUT ================= */
 
     .story {
-    max-width: 100%;     /* fit screen */
-    padding: 0 10px;     /* breathing space */
+  max-width: 100%;
+  padding: 0 10px;
 }
 
 .story p {
-    font-size: 14px;     /* smaller text */
-    line-height: 1.5;    /* better readability */
-    text-align: justify; /* cleaner look */
+  font-size: 14px;
+  line-height: 2.0;
+  text-align: justify;
 }
-    .card-container {
-        display: flex;
-        flex-wrap: nowrap;            /* IMPORTANT: no wrapping */
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        gap: 0;                       /* no spacing = no peeking */
-        padding: 0;
-    }
 
-    /* hide scrollbar */
-    .card-container::-webkit-scrollbar {
-        display: none;
-    }
+/* REMOVE SWIPE */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;     /* allow wrapping */
+  gap: 20px;           /* optional spacing */
+  overflow: visible;   /* no scrolling */
+  padding: 0px;
+  width: 80%;         /* or any value like 70%, 60% */
+  max-width: 900px;
+  margin: 30px auto;
+  
+}
 
-    /* ================= 1 CARD PER SCREEN ================= */
-    .card {
-        flex: 0 0 100%;
-        min-width: 100%;
-        max-width: 100%;
-        scroll-snap-align: center;
-        margin: 0;
-    }
+/* NORMAL CARD LAYOUT */
+.card {
+  flex: 1 1 300px;     /* responsive cards */
+  max-width: 100%;
+  margin: 0;
+}
 
 
     /* ================= SWIPE CARDS INDEX ================= */
