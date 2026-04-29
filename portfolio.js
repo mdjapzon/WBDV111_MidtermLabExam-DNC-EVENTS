@@ -228,3 +228,38 @@ function openGallery(type) {
         modal.classList.add("show");
     }, 10);
 }
+
+const nav = document.querySelector("nav");
+const toggle = document.querySelector(".menu-toggle");
+const overlay = document.querySelector(".overlay");
+
+/* TOGGLE MENU */
+function toggleMenu() {
+    nav.classList.toggle("show");
+    overlay.classList.toggle("show");
+}
+
+/* CLICK ☰ */
+toggle.addEventListener("click", toggleMenu);
+
+/* CLICK OUTSIDE */
+overlay.addEventListener("click", () => {
+    nav.classList.remove("show");
+    overlay.classList.remove("show");
+});
+
+/* CLICK LINKS */
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("show");
+        overlay.classList.remove("show");
+    });
+});
+
+/* AUTO CLOSE ON SCROLL */
+window.addEventListener("scroll", () => {
+    if (nav.classList.contains("show")) {
+        nav.classList.remove("show");
+        overlay.classList.remove("show");
+    }
+});
