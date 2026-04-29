@@ -83,13 +83,37 @@
         }
 
         .dropdown-content a:hover {
-            background: #7d1c4a;
+            background: #92487A;
             color: #FFEDFA;
         }
 
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        /* HAMBURGER (hidden by default) */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* OVERLAY */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 900;
+}
+
+.overlay.show {
+    display: block;
+}
 
         .logo {
             margin-right: auto;
@@ -105,12 +129,6 @@
             height: 80px;
             width: 100px;
         }
-        .menu-toggle {
-            display: none;
-            font-size: 28px;
-            cursor: pointer;
-            color: #FFEDFA;
-            }
 
 
         /* HERO */
@@ -384,7 +402,7 @@
 
         /* PACKAGES */
 
-        .packages {
+        .packagess {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
@@ -799,224 +817,7 @@
         }
 
 
-        /* -------------------PARA SA MOBILE RESPONSIVE-------------------*/
-
-
-        @media (max-width: 768px) {
-            
-            /* NAVBAR */
-            .menu-toggle {
-                display: block;
-                position: fixed;
-                top: 15px;
-                right: 15px;
-                z-index: 9999; 
-            }
-            
-            header {
-            padding: 15px;
-            }
-
-            nav {
-                position: fixed;       /* pang sidebar */
-                top: 0;
-                right: -250px;          /* off screen */
-                width: 250px;
-                height: 100vh;
-                background: #3a0519;
-                  
-                display: flex;
-                flex-direction: column; /* pang vertical yung header */
-                align-items: flex-start;
-                padding-top: 80px;
-                transition: 0.3s;
-                z-index: 2000;
-                pointer-events: none;
-                }
-            nav.show{
-                right: 0;
-                opacity: 1;
-                pointer-events: all;
-            }
-            nav a {
-                width: 100%;
-                padding: 15px 25px;
-                margin: 0;
-                font-size: 18px;
-                text-align: center;
-
-            }
-            .logo img {
-                position: static; /* remove absolute */
-                height: 60px;
-                width: auto;
-                margin-bottom: 10px;
-            }
-            .overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.212);
-                opacity: 0;
-                pointer-events: none;
-                transition: 0.3s;
-                z-index: 1500;
-            }
-            .overlay.show {
-                opacity: 1;
-                pointer-events: all;
-            }
-
-  
-            /* HERO */
-            .hero {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 20px;
-                position: relative;
-            }
-
-            .hero-content {
-                position: relative;
-                width: 100%;
-                border-radius: 12px;
-                overflow: hidden;
-            }
-
-            .hero-content img {
-                opacity: 80%;
-                width: 100%;
-                height: auto;
-                display: block;
-                filter: blur(3px); 
-                filter: brightness(50%); 
-            }
-
-            .hero-text {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                color: rgb(255, 255, 255);
-                text-align: center;
-                padding: 30px;
-                border-radius: 12px;
-            }
-
-            .hero-text h1 {
-                font-family: 'Times New Roman', serif;
-                font-size: 50px;
-                margin-bottom: 5px;
-                color: #ffedfa;
-                text-shadow: 5px 5px 2px black;
-            }
-            
-            .hero-text p {
-                font-family:'Times New Roman', Times, serif;
-                font-size: 10px;
-                margin-bottom: 50px;
-                font-weight: bold;
-                color: #ffedfa;
-                text-shadow: 0 0 40px black;     
-            }
-            
-            .hero-btn {
-                position: absolute;
-                margin-top: 10px;
-                transform: translate(-50%, -50%);
-                padding: 10px;
-                border: 2px #56021F;
-                background: #E7BCDE;
-                color: #56021F;  
-                border-radius: 10px;   
-                cursor: pointer;     
-                font-family: 'Times New Roman', serif;       
-                font-weight: bold;    
-                font-size: 14px;
-                z-index: 2; /* ensures it's above everything */
-            }
-            
-            .hero-btn:hover {
-                background: #7d1c4a;
-                color: #FFEDFA;
-            }
-
-            /* SECTIONS */
-            section {
-                padding: 30px 20px;
-            }
-            .title {
-                font-size: 28px;
-            }
-
-            /* SERVICES / PACKAGES / PORTFOLIO */
-            .services,
-            .packages,
-            .portfolio-grid,
-            .choose,
-            .test-container {
-                grid-template-columns: 1fr; /* 1 column */
-            }
-
-            /* CARDS */
-            .services-card,
-            .package-card,
-            .portfolio-card,
-            .choose-card,
-            .test-card {
-                padding: 15px;
-            }
-            /* CTA */
-            .cta-section {
-                padding: 30px 15px;
-            }
-            .cta-section h2 {
-                font-size: 28px;
-            }
-            .cta-btn {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-            
-            /* FOOTER */
-            .footer-logo img {
-                width: 120px;
-                height: auto;
-            }
-            .footer-content p {
-                font-size: 14px;
-        }
-
-    }
-
-        /* nilagay ko para sa pull to the top */
-        .back-to-top-text {
-        text-align: center;  /* pang center nung text */
-        margin: 20px 0;      /* spacing sya above/below (vertical) */
-        }
-
-        .back-to-top-text a {    
-            display: inline-block; /* need sya for animation */
-            animation: jump 1s infinite; /* ito yung jumping animation */
-        }
-        .back-to-top-text a:hover {
-            color: #FFEDFA;
-        }
-
-        /* Jumping animation */
-        
-        @keyframes jump {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-        transform: translateY(-8px); /* yung jump height nya*/
-            }
-        }
-
+       
 
     
         
