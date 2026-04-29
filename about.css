@@ -57,6 +57,7 @@
         /* DROPDOWN */
         .dropdown {
             position: relative;
+            display: flex;
         }
 
         .dropbtn {
@@ -90,7 +91,7 @@
             display: block;
         }
 
-         /* HAMBURGER (hidden by default) */
+        /* HAMBURGER (hidden by default) */
 .menu-toggle {
     display: none;
     font-size: 28px;
@@ -128,7 +129,6 @@
             height: 80px;
             width: 100px;
         }
-
 
         /* HERO */
 
@@ -177,6 +177,7 @@
             margin-bottom: 15px;
             color: #ffedfa;
             text-shadow: 5px 5px 2px black;
+            
         }
     
         .hero-text p {
@@ -185,8 +186,10 @@
             margin-top: 10px;
             font-weight: bold;
             color: #ffedfa;
-            text-shadow: 0 0 40px black;   
+            text-shadow: 0 0 40px black;
+            
         }
+
 
         h2 {
             font-size: 42px; 
@@ -194,7 +197,6 @@
             text-align: center;
             margin: 30px;
             margin-bottom: 20px 30px;
-            text-shadow: 2px 2px 5px #000000;
         }
 
         /* Hover boxes font size */
