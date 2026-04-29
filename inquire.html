@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,9 @@
   <link rel="icon" href="images/DNC EVENTS LOGO.png">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="inquire.css">
-  <style>
+<link rel="stylesheet" href="phoneresponsive.css">
+<link rel="stylesheet" href="tabletresponsive.css">
 
-    
-
-  </style>
 </head>
 <body>
   <!-- NAVBAR -->
@@ -20,12 +19,12 @@
         <div class="logo">
             <img src="images/DNC EVENTS LOGO.png" alt="">
         </div>
-
+        <div class="menu-toggle" id="menu-toggle">☰</div>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
         <div class="dropdown">
-           <a href="#" class="dropbtn">Catering</a>
+           <a class="dropbtn">Catering</a>
         <div class="dropdown-content">
             <a href="services.html">Services</a>
             <a href="packages.html">Packages</a>
@@ -38,6 +37,7 @@
         </nav>
     </header>
     
+    <div class="overlay"></div> 
 
     <!-- HERO -->
 
@@ -102,25 +102,31 @@
     </div>
 
     <!-- RIGHT SIDE -->
-    <div class="form">
-      <h2>SEND US MESSAGE</h2>
+   <div class="form">
+  <h2>SEND US MESSAGE</h2>
 
-      <label>YOUR NAME *</label>
-      <input type="text" placeholder="Enter Your Name">
+  <form id="inquiryForm">
 
-      <label>EMAIL ADDRESS *</label>
-      <input type="email" placeholder="Enter Your @email.com">
+    <label>YOUR NAME *</label>
+    <input type="text" id="name" placeholder="Enter Your Name" required>
 
-      <label>SUBJECT *</label>
-      <input type="text" placeholder="What is this regarding?">
+    <label>EMAIL ADDRESS *</label>
+    <input type="email" id="email" placeholder="Enter Your @email.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
 
-      <label>MESSAGE *</label>
-      <textarea placeholder="Tell us how we can help..."></textarea>
+    <label>SUBJECT *</label>
+    <input type="text" id="subject" placeholder="What is this regarding?" required>
 
-      <button>SEND MESSAGE</button>
-    </div>
-    
-  </div>
+    <label>MESSAGE *</label>
+    <textarea id="message" placeholder="Tell us how we can help..." required></textarea>
+
+    <button type="submit" id="submitBtn">SEND MESSAGE</button>
+
+  </form>
+
+   <p id="statusMessage"></p>
+</div>
+</div>
+
 
  <!-- FOOTER -->
 
@@ -175,7 +181,8 @@
                 Copyright © 2026 DNC Events. All Rights Reserved.
         </div>
     </footer>
-
+    
+    <script src="inquire.js"></script>
 
 </body>
 </html>
