@@ -816,6 +816,92 @@
             }
         }
 
+   
+/* ================= TABLET ONLY (iPad standard) ================= */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        padding: 30px 40px;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-content {
+        height: 55vh !important;
+    }
+
+    .hero-content img {
+        height: 53vh !important;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero-btn {
+        top: 89%;
+    }
+
+    section {
+        padding: 40px 30px;
+    }
+
+    .choose {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .test-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .packagess {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-section {
+        padding: 60px 40px;
+    }
+
+    .cta-section h2 {
+        font-size: 32px;
+    }
+}
+
+    /* ================= FOOTER ================= */
+    .footer-content {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .footer-center,
+    .footer-right {
+        margin-left: 0;
+    }
+
+    .footer-logo img {
+        width: 220px;
+    }
+
+    .footer-bottom-social img {
+        margin-left: 0;
+        width: 38px;
+        height: 38px;
+    }
+        
+
+        
 
        
 
