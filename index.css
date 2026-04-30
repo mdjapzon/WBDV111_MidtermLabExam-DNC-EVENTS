@@ -859,7 +859,9 @@
     }
 
     .services {
-        grid-template-columns: repeat(2, 1fr);
+         display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     }
 
     .packagess {
@@ -877,6 +879,25 @@
     .cta-section h2 {
         font-size: 32px;
     }
+
+    .services-card:last-child {
+      grid-column: 1 / -1;   /* full row */
+    justify-self: center;  /* center it */
+    width: 50%;            /* same width as 1 column */
+    }
+
+    .package-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
+    }
+
+    .test-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
+    }
+
 }
 
     /* ================= FOOTER ================= */
