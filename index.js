@@ -114,6 +114,46 @@ window.addEventListener("scroll", () => {
         window.scrollTo({ top: 0, behavior: "smooth" }); // smooth scroll to top
         });
 
+document.addEventListener("DOMContentLoaded", () => {
+
+  const containers = document.querySelectorAll(
+    ".services, .packagess, .portfolio-grid, .test-container, .choose"
+  );
+
+  containers.forEach(container => {
+
+    let scrollAmount = container.clientWidth;
+    let autoScroll;
+
+    function startAutoScroll() {
+      autoScroll = setInterval(() => {
+        if (container.scrollLeft + scrollAmount >= container.scrollWidth) {
+          container.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        }
+      }, 3000); // ⏱ speed (3 seconds)
+    }
+
+    function stopAutoScroll() {
+      clearInterval(autoScroll);
+    }
+
+    // Start autoplay
+    startAutoScroll();
+
+    // Pause when user interacts
+    container.addEventListener("touchstart", stopAutoScroll);
+    container.addEventListener("mouseenter", stopAutoScroll);
+
+    // Resume after interaction
+    container.addEventListener("touchend", startAutoScroll);
+    container.addEventListener("mouseleave", startAutoScroll);
+
+  });
+
+});
+
         /*const btn = document.getElementById("packageBtn");
         const dropdown = btn.parentElement;
 
