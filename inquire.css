@@ -426,3 +426,64 @@
             font-size: 13px;
             text-align: center;
         }
+
+               /* ================= TABLET ONLY (iPad standard) ================= */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        padding: 30px 40px;
+    }
+
+    .hero {
+        height: 55vh;
+    }
+
+    .hero-content {
+        height: 55vh !important;
+    }
+
+    .hero-content img {
+        height: 50vh !important;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero-btn {
+        top: 76%;
+    }
+
+    .cta-section {
+        padding: 50px;
+        width: 100%;
+    }
+
+    .cta-section h2 {
+        font-size: 32px;
+    }
+
+
+    /* ================= FOOTER ================= */
+    .footer-content {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .footer-center,
+.footer-right {
+    margin-left: 0 !important;
+}
+
+    .footer-logo img {
+        width: 220px;
+    }
+
+    .footer-bottom-social img {
+        margin-left: 0;
+        width: 38px;
+        height: 38px;
+    }
+}
