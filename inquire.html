@@ -111,6 +111,10 @@
     <label>YOUR NAME *</label>
     <input type="text" id="name" placeholder="Enter Your Name" required>
 
+    <label>PHONE NUMBER *</label>
+    <input type="text" id="phone" placeholder="Phone Number" maxlength="11" required
+    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
     <label>EMAIL ADDRESS *</label>
     <input type="email" id="email" placeholder="Enter Your @email.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
 
