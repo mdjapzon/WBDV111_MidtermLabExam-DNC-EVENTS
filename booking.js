@@ -144,8 +144,10 @@ boxes.forEach(box => {
 const dateInput = document.getElementById("eventDate");
 
 const today = new Date();
-const year = today.getFullYear();
+const yyyy = today.getFullYear();
+const mm   = String(today.getMonth() + 1).padStart(2, "0");
+const dd   = String(today.getDate()).padStart(2, "0");
 
-dateInput.min = `${year}-01-01`;
-dateInput.max = `${year + 10}-12-31`;
+dateInput.min = `${yyyy}-${mm}-${dd}`;
+dateInput.max = `${yyyy + 10}-12-31`;
 });
