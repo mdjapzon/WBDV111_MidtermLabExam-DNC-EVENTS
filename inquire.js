@@ -133,6 +133,17 @@ window.addEventListener("scroll", () => {
         nav.classList.remove("show");
         overlay.classList.remove("show");
     }
+ });
 });
 
-});
+if (phone.value.length < 11) {
+  phone.setCustomValidity("Please enter a valid 11-digit phone number.");
+  phone.reportValidity();
+  return;
+}
+phone.setCustomValidity("");
+
+
+
+
+
