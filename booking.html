@@ -73,7 +73,8 @@
                     <div class="form-group">
                      <label for="phone">PHONE NUMBER *</label>
                        <input type="text" id="phone" placeholder="Phone Number" maxlength="11" minlength="11" required
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        oninvalid="this.setCustomValidity('Please enter exactly 11 digits.')">  
                     </div>
                 </div>
 
