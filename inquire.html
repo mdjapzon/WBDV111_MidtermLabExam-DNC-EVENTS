@@ -109,8 +109,9 @@
   <form id="inquiryForm">
 
     <label>YOUR NAME *</label>
-    <input type="text" maxlength="50" id="name" placeholder="Enter Your Name" required>
-
+    <input type="text" maxlength="50" id="name" placeholder="Enter Your Name" required
+     oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
+    
     <label>PHONE NUMBER *</label>
     <input type="text" id="phone" placeholder="Phone Number" maxlength="11" required
     oninput="this.value = this.value.replace(/[^0-9]/g, '')">
