@@ -145,8 +145,9 @@ phone.setCustomValidity("");
 
 
 // Contact input format: auto-format as 09XX-XXX-XXXX, only digits allowed, max 11 digits
+const phone = document.getElementById("phone");
 phone.addEventListener("input", function () {
-  let numbers = this.value.replace(/[^0-9]/g, "");
+ let numbers = this.value.replace(/[^0-9]/g, "");
 
   if (numbers.length > 0 && !numbers.startsWith("09")) {
     numbers = "09" + numbers.replace(/^0+/, "");
