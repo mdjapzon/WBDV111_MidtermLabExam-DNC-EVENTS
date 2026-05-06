@@ -151,3 +151,22 @@ const dd   = String(today.getDate()).padStart(2, "0");
 dateInput.min = `${yyyy}-${mm}-${dd}`;
 dateInput.max = `${yyyy + 10}-12-31`;
 });
+
+// Contact input format: auto-format as 09XX-XXX-XXXX, only digits allowed, max 11 digits
+phone.addEventListener("input", function () {
+  let numbers = this.value.replace(/[^0-9]/g, "");
+
+  if (numbers.length > 0 && !numbers.startsWith("09")) {
+    numbers = "09" + numbers.replace(/^0+/, "");
+  }
+
+  numbers = numbers.slice(0, 11);
+
+  let formatted = "";
+  if (numbers.length > 0) formatted = numbers.substring(0, 4);
+  if (numbers.length >= 5) formatted += "-" + numbers.substring(4, 7);
+  if (numbers.length >= 8) formatted += "-" + numbers.substring(7, 11);
+
+  this.value = formatted;
+  phone.setCustomValidity("");
+});
