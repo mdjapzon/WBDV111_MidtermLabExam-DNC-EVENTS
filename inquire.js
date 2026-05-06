@@ -136,18 +136,12 @@ window.addEventListener("scroll", () => {
  });
 });
 
-if (phone.value.length < 11) {
-  phone.setCustomValidity("Please enter a valid 11-digit phone number.");
-  phone.reportValidity();
-  return;
-}
-phone.setCustomValidity("");
-
 
 // Contact input format: auto-format as 09XX-XXX-XXXX, only digits allowed, max 11 digits
 const phone = document.getElementById("phone");
-phone.addEventListener("input", function () {
- let numbers = this.value.replace(/[^0-9]/g, "");
+
+ phone.addEventListener("input", function () {
+  let numbers = this.value.replace(/[^0-9]/g, "");
 
   if (numbers.length > 0 && !numbers.startsWith("09")) {
     numbers = "09" + numbers.replace(/^0+/, "");
