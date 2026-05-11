@@ -1,5 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+/* eto binago ko dito mula line 5 hanggang 29 */
+
+/* ================= GOOGLE MAP SEARCH ================= */
+
+const searchButton = document.getElementById("searchLocation");
+const locationInput = document.getElementById("location");
+const mapFrame = document.getElementById("googleMap");
+
+searchButton.addEventListener("click", () => {
+
+    if (locationInput.value.trim() !== "") {
+
+        mapFrame.src =
+        `https://maps.google.com/maps?q=${encodeURIComponent(locationInput.value)}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
+    }
+
+});
+
+/* ENTER KEY SUPPORT */
+locationInput.addEventListener("keypress", (e) => {
+
+    if (e.key === "Enter") {
+        e.preventDefault();
+        searchButton.click();
+    }
+
+});
+
+
+
+
   const form = document.getElementById("eventForm");
   const button = form.querySelector("button[type='submit']");
   const status = document.getElementById("statusMessage");
