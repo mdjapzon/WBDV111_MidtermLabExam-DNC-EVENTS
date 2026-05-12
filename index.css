@@ -715,7 +715,6 @@
             justify-content: center;
             gap: 15px;
             margin-top: 20px;
-            
         }
 
         .footer-bottom-social img {
@@ -724,7 +723,7 @@
             object-fit: contain;
             transition: 0.3s;
             border-radius: 10px;
-            margin-left: -150%;
+            margin-left: -170%;
             
         }
 
