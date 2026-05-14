@@ -577,10 +577,9 @@
 
     .cta-section h2 {
         font-size: 32px;
-    }
-}
+  }
 
-    /* ================= FOOTER ================= */
+  /* ================= FOOTER ================= */
     .footer-content {
         flex-wrap: wrap;
         gap: 25px;
@@ -600,3 +599,6 @@
         width: 38px;
         height: 38px;
     }
+}
+
+    
