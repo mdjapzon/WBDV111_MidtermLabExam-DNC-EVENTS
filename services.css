@@ -292,15 +292,16 @@
         }
 
         .desc {
-            display: none;
-            margin-left: 20px;
-            margin-top: 5px;
+           max-height: 0;
+           overflow: hidden;
+           margin-left: 20px;
+           margin-top: 5px;
+           transition: max-height 0.8s ease;  
         }
 
         .item:hover .desc {
-            display: block;
-        }
-
+           max-height: 300px;
+        }   
          /* CALL TO ACTION */
 
         .cta-section {
