@@ -460,7 +460,6 @@
         text-align: center;  /* pang center nung text */
         margin: 20px 0;      /* spacing sya above/below (vertical) */
         }
-
         .back-to-top-text a {    
             display: inline-block; /* need sya for animation */
             animation: jump 1s infinite; /* ito yung jumping animation */
