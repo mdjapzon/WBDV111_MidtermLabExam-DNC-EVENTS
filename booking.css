@@ -728,9 +728,6 @@
 
         .location-search-row {
             justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
         }
 
         #googleMap {
@@ -811,6 +808,9 @@
             }
         }
 
+
+        /* ================= BOOKING GRID LAYOUT ================= */
+
         .booking-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -822,4 +822,47 @@
         .booking-grid .form-group {
             display: flex;
             flex-direction: column;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            .booking-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        .location-search-row {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .location-search-row input {
+            width: 100%;
+            padding: 14px 45px 14px 14px; /* IMPORTANT: space for icon */
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        /* ICON FIX */
+        .search-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            width: auto;        /* alisin fixed block behavior */
+            height: auto;
+            padding: 0;
+
+            background: transparent;
+            border: none;
+            cursor: pointer;
+
+            font-size: 16px;
+            color: #ccc;
         }
