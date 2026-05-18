@@ -93,7 +93,7 @@
         display: block;
         }
 
-        /* HAMBURGER (hidden by default) */
+        /* HAMBURGER */
         .menu-toggle {
         display: none;
         font-size: 28px;
@@ -156,14 +156,14 @@
         object-fit: cover;
         display: block;
         }
-        /* ===== FORM SECTION ===== */
+        /* FORM SECTION */
         .section {
         display: flex;
         justify-content: center;
         padding: 60px 20px;
         }
 
-        /* ===== FORM BOX ===== */
+        /* FORM BOX*/
         .form-box {
         width: 100%;
         max-width: 1000px;
@@ -185,7 +185,7 @@
 
         }
 
-        /* ===== INPUTS ===== */
+        /* INPUTS */
         .form-group {
         margin-bottom: 8px;
         }
@@ -212,11 +212,10 @@
         height: 110px;
         }
 
-        /* ===== ROWS ===== */
         .row {
         display: flex;
         gap: 20px;
-        flex-wrap: wrap; /* prevents weird stretching */
+        flex-wrap: wrap;
         align-items: flex-start;
         }
 
@@ -232,7 +231,7 @@
         }
 
 
-        /* ===== LABELS ===== */
+        /* LABELS */
         .form-group label {
         font-size: 12px;
         margin-bottom: 6px;
@@ -245,7 +244,7 @@
 
         }
 
-        /* ===== SERVICES ===== */
+        /* SERVICES */
         .services {
         margin: 30px 0;
         font-family: 'Times New Roman', Times, serif;
@@ -302,7 +301,7 @@
         box-shadow: 0 10px 25px rgb(255, 78, 166);
         }
 
-        /* ===== BUTTON ===== */
+        /* BUTTON */
         button {
         width: 100%;
         padding: 14px;
@@ -321,7 +320,7 @@
         transform: translateY(-2px);
         box-shadow: 0 10px 25px rgba(236, 72, 154, 0.39);
         }
-        /* ===== CONTACT ===== */
+        /* CONTACT */
         .contact {
         display: flex;
         gap: 15px;
@@ -640,7 +639,7 @@
         text-align: center;
         }
 
-                    /* TABLET */
+                    /* TABLET ONLY */
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
             body {
@@ -678,8 +677,6 @@
                 font-size: 32px;
             }
 
-
-            /* ================= FOOTER ================= */
             .footer-content {
                 flex-wrap: wrap;
                 gap: 25px;
@@ -712,7 +709,7 @@
         /* simula dito ako nag bago hanggang baba */
 
 
-        /* LOCATION + MAP */
+        /* ================= LOCATION + MAP ================= */
 
         .booking-top-row {
             display: flex;
@@ -783,7 +780,6 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.25);
         }
 
-        /* MOBILE */
         @media (max-width: 768px) {
 
             .booking-top-row {
