@@ -843,26 +843,27 @@
 
         .location-search-row input {
             width: 100%;
-            padding: 14px 45px 14px 14px; /* IMPORTANT: space for icon */
+            padding: 14px 45px 14px 14px;
             border-radius: 8px;
             box-sizing: border-box;
         }
 
-        /* ICON FIX */
         .search-icon {
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-
-            width: auto;        /* alisin fixed block behavior */
-            height: auto;
-            padding: 0;
-
-            background: transparent;
-            border: none;
-            cursor: pointer;
-
-            font-size: 16px;
-            color: #ccc;
+         position: static;
+         width: 60px;
+         height: auto;
+         padding: 0;
+         background: #3a0519; /* Vibrant Pink */
+         border: none;
+         border-radius: 0 8px 8px 0; /* Rounds only the right corners */
+         margin-left: -5px; /* Snap it perfectly to the input box */
+         cursor: pointer;
+         font-size: 16px;
+         transition: 0.3s;
+         display: flex;
+         justify-content: center;
+         align-items: center;
         }
+            .search-icon:hover {
+    box-shadow: 0 0 15px #ec4899;
+    }
