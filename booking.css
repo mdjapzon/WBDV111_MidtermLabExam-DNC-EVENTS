@@ -809,13 +809,11 @@
         }
 
 
-        /* ================= BOOKING GRID LAYOUT ================= */
-
         .booking-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            column-gap: 14px; /* dikit pakaliwa pakanan */
-            row-gap: 12px;    /* dikit pataas pababa */
+            column-gap: 14px;
+            row-gap: 12px; 
             margin-bottom: 15px;
         }
 
@@ -838,7 +836,7 @@
             position: relative;
             width: 100%;
             display: flex;
-            align-items: center;
+            align-items: stretch;
         }
 
         .location-search-row input {
@@ -848,15 +846,16 @@
             box-sizing: border-box;
         }
 
+        /* ICON FIX */
         .search-icon {
          position: static;
          width: 60px;
          height: auto;
          padding: 0;
-         background: #3a0519; /* Vibrant Pink */
+         background: #3a0519;
          border: none;
-         border-radius: 0 8px 8px 0; /* Rounds only the right corners */
-         margin-left: -5px; /* Snap it perfectly to the input box */
+         border-radius: 0 8px 8px 0;
+         margin-left: -5px;
          cursor: pointer;
          font-size: 16px;
          transition: 0.3s;
