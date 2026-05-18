@@ -17,7 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 80px;
+    padding: 20px 80px;
     background: #3a0519;
     position: sticky;   /* <- eto binago ko para kapag iniiscroll di nawawala yung header */
     top: 0;
