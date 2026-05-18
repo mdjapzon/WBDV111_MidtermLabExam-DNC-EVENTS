@@ -46,8 +46,9 @@ nav a {
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
     color: #FCF5EE;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
+    margin-bottom: 22px;
 }
 
 nav a:hover {
@@ -79,7 +80,7 @@ nav a:hover {
     padding: 12px 15px;
     display: block;
     margin: 0;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .dropdown-content a:hover {
@@ -119,7 +120,7 @@ nav a:hover {
     margin-right: auto;
     display:flex;
     align-items: center;
-    gap: 10px;
+    gap: 11px;
 }
 
 .logo img { 
@@ -429,14 +430,14 @@ footer {
 }
 
 .footer-logo img {
-    width: 280px;
+    width: 200px;
     height: auto;
     margin-bottom: 5px;
 }
 
 .footer-description {
     margin: 3px 0;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.4;
 }
 
