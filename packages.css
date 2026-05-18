@@ -18,7 +18,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 30px 80px;
+            padding: 20px 80px;
             background: #3a0519;
             position: sticky;   /* <- eto binago ko para kapag iniiscroll di nawawala yung header */
             top: 0;
@@ -47,8 +47,9 @@
             font-family: 'Times New Roman', Times, serif;
             text-decoration: none;
             color: #FCF5EE;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
+               margin-bottom: 22px;
         }
 
         nav a:hover {
@@ -80,7 +81,7 @@
             padding: 12px 15px;
             display: block;
             margin: 0;
-            font-size: 16px;
+            font-size: 20px;
         }
 
         .dropdown-content a:hover {
@@ -104,32 +105,31 @@
             left: 50px;
             top: 15px;
             height: 80px;
-            width: 100px;
+            width: 110px;
         }
         /* HAMBURGER (hidden by default) */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: white;
-}
-
-/* OVERLAY */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    display: none;
-    z-index: 900;
-}
-
-.overlay.show {
-    display: block;
-}
-
+       .menu-toggle {
+           display: none;
+           font-size: 28px;
+           cursor: pointer;
+           color: white;
+       }
+       
+       /* OVERLAY */
+       .overlay {
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: rgba(0,0,0,0.5);
+           display: none;
+           z-index: 900;
+       }
+       
+       .overlay.show {
+           display: block;
+       }
 
         /* HERO */
 
@@ -362,14 +362,14 @@
         }
 
         .footer-logo img {
-            width: 280px;
+            width: 200px;
             height: auto;
             margin-bottom: 5px;
         }
 
         .footer-description {
             margin: 3px 0;
-            font-size: 14px;
+            font-size: 20px;
             line-height: 1.4;
         }
 
