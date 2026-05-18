@@ -63,4 +63,21 @@ window.addEventListener("scroll", () => {
             threshold: 0.2, // 20% visible bago mag-appear
         };
 
+// TOGGLE DESC SA MOBILE TAP
+document.querySelectorAll('.item').forEach(item => {
+    item.addEventListener('click', () => {
+        const desc = item.querySelector('.desc');
+        const isOpen = desc.style.maxHeight && desc.style.maxHeight !== '0px';
+        
+        
+        document.querySelectorAll('.item .desc').forEach(d => {
+            d.style.maxHeight = '0px';
+        });
+
+        
+        if (!isOpen) {
+            desc.style.maxHeight = '300px';
+        }
+    });
+});
 
