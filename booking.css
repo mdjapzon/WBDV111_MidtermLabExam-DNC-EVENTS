@@ -850,12 +850,12 @@
         .search-icon {
          position: static;
          width: 60px;
-         height: auto;
+         height: 44px;
          padding: 0;
          background: #3a0519;
          border: none;
-         border-radius: 0 8px 8px 0;
-         margin-left: -5px;
+         border-radius: 8px;
+         margin-left: 0px;
          cursor: pointer;
          font-size: 16px;
          transition: 0.3s;
