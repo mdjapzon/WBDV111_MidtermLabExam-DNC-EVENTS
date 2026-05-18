@@ -185,7 +185,7 @@
 
         .section {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 40px; /* better than space-around */
     padding: 50px;
