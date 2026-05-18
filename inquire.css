@@ -487,3 +487,30 @@
         height: 50px;
     }
 }
+select {
+    width: 100%;
+    padding: 14px;
+    background: #3a0519;
+    border: 1px solid #1f2937;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    
+}
+
+select:focus {
+    border-color: #92487A;
+    box-shadow: 0 10px 25px rgb(236, 115, 176);
+    outline: none;
+}
+select option[value=""] {
+    color: #64748b;
+}
+
+select option {
+    background: #3a0519;
+    color: #fff;
+}
