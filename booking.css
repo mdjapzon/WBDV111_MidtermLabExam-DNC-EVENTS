@@ -817,59 +817,6 @@
             flex-direction: column;
         }
 
-        @media (max-width: 768px) {
-
-            .booking-grid {
-                grid-template-columns: 1fr;
-            }
-            .location-search-row input {
-             padding: 14px !important; 
-    }
-        }
-        
-        .location-search-row {
-            position: relative;
-            width: 100%;
-            display: flex;
-            align-items: center;
-        }
-
-        .location-search-row input {
-            width: 100%;
-            padding: 14px 45px 14px 14px;
-            border-radius: 8px;
-            box-sizing: border-box;
-        }
-
-.search-icon {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    width: 120px;
-    height: 32px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #5a0028;
-    border: none;
-    border-radius: 10px;
-
-    font-size: 16px;
-    color: white;
-
-    cursor: pointer;
-
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-.search-icon:hover {
-    background: #ff9bd2;
-    color: #5a0028;
-    transform: translateY(-50%);
-}
 /* MOBILE */
 @media (max-width: 768px) {
 
