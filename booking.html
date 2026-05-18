@@ -87,9 +87,12 @@
 
                 <!-- PHONE -->
                 <div class="form-group">
-                  <label>PHONE NUMBER *</label>
-                   <input type="text" id="phone" placeholder="Phone Number" maxlength="11" required
-                    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <label for="phone">PHONE NUMBER *</label>
+                    <input type="text"
+                        id="phone"
+                        placeholder="09XX-XXX-XXXX"
+                        maxlength="13"
+                        required>
                 </div>
 
                 <!-- EVENT DATE -->
@@ -401,7 +404,28 @@
                 <button type="submit">Book Event</button>
                 <p id="statusMessage"></p>
             </form>
-            
+
+            <!-- Contact Section -->
+          <div class="contact">
+
+    <a href="#" class="contact-box" data-type="phone">
+        📞<br>Call Us
+        <div class="contact-popup">0956 251 3213</div>
+    </a>
+
+    <a href="#" class="contact-box" data-type="email">
+        ✉️<br>Email Us                         
+        <div class="contact-popup">dncevents@gmail.com</div>
+    </a>
+
+    <a href="#" class="contact-box" data-type="location">
+        📍<br>Visit Us
+        <div class="contact-popup">
+             L. Wood St,  Javier Compound, 1920, Taytay, Rizal</div>
+    </a>
+
+</div>
+    </div>
         </div>
     </div>
 
