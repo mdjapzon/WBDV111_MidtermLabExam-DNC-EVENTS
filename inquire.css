@@ -499,6 +499,7 @@ select {
     transition: 0.3s;
     font-family: 'Times New Roman', Times, serif;
     cursor: pointer;
+    margin-bottom: 18px;
     
 }
 
