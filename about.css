@@ -198,6 +198,7 @@ h2 {
     text-align: center;
     margin: 30px;
     margin-bottom: 20px 30px;
+    text-shadow: 2px 2px 5px #000000;
 }
 
 h3 {
