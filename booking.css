@@ -216,7 +216,7 @@ textarea {
 .row {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* prevents weird stretching */
+    flex-wrap: wrap;
     align-items: flex-start;
 }
 
@@ -226,10 +226,10 @@ textarea {
 }
 
 input[type="date"] {
-    width: 100%;
-    appearance: none;
-    -webkit-appearance: none;
-    font-family: 'Times New Roman', Times, serif;
+        width: 100%;
+        appearance: none;
+        -webkit-appearance: none;
+        font-family: 'Times New Roman', Times, serif;
 }
 
 /* ===== LABELS ===== */
