@@ -231,8 +231,7 @@ section + section {
 }
 
 
-/* ================= PORTFOLIO IMAGES GRID (UPDATED) ================= */
-/* ================= PORTFOLIO IMAGES GRID (ORIGINAL LOOK - 3x2 WRAP) ================= */
+/* ================= PORTFOLIO IMAGES GRID ================= */
 .portfolio-section {
     max-width: 1500px;
     margin: 0 auto;
@@ -241,19 +240,18 @@ section + section {
 
 .gallery {
     display: flex;
-    justify-content: center; /* Centers the 2 bottom cards under the top 3 */
-    gap: 40px;               /* Your original 40px gap */
-    flex-wrap: wrap;         /* Allows items to break into multiple rows */          
+    justify-content: center; 
+    gap: 40px;               
+    flex-wrap: wrap;                
     padding: 20px 10px;          
     width: 100%;
 }
 
-/* Base style for smaller image boxes (Your exact original values) */
 .gallery .box {
     position: relative;
-    width: 24%; /* Your original size so they look exactly like your first picture */
+    width: 24%;
     min-width: 220px;
-    height: 280px; /* Your original height */
+    height: 280px;
     overflow: hidden;
     border-radius: 10px;
     border: 1px solid #FFEDFA;
@@ -266,18 +264,16 @@ section + section {
 .gallery .box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Back to your original zoom/fill behavior */
+    object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
 }
 
-/* Hover Mechanics for Entire Box Element */
 .gallery .box:hover {
     transform: translateY(-8px) scale(1.04); 
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6), 0 0 15px rgba(231, 188, 222, 0.3);
 }
 
-/* Deeper inner-image zoom effect on box hover */
 .gallery .box:hover img {
     transform: scale(1.08);
 }
@@ -597,7 +593,7 @@ footer {
     }
     
     .gallery .box {
-        width: 45%; /* Shrinks down gracefully to 2 items per row on tablet views */
+        width: 45%;
     }
     
     .cta-section {
