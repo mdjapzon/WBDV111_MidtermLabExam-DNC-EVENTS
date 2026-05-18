@@ -849,20 +849,32 @@
         }
 
         /* ICON FIX */
-        .search-icon {
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
+       .search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
 
-            width: auto;        /* alisin fixed block behavior */
-            height: auto;
-            padding: 0;
+    width: 120px;
+    height: 32px;
 
-            background: transparent;
-            border: none;
-            cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            font-size: 16px;
-            color: #ccc;
-        }
+    background: #5a0028;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+    color: white;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.search-icon:hover {
+    background: #ff9bd2;
+    color: #5a0028;
+    transform: translateY(-50%);
+}
