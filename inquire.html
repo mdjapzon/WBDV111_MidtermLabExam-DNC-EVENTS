@@ -106,10 +106,9 @@
     <label>EMAIL ADDRESS *</label>
     <input type="email" id="email" placeholder="Enter Your @email.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
 
-   
-
-   <label for="subject">SUBJECT *</label>
-      <select id="subject" name="subject" required>
+<label for="subject">SUBJECT *</label>
+<select id="subject" name="subject" required>
+    <!-- The disabled hidden option acts as a placeholder -->
     <option value="" disabled selected hidden>What is this regarding?</option>
     <option value="all-in-wedding">ALL-IN WEDDING</option>
     <option value="basic-wedding">BASIC WEDDING</option>
@@ -117,7 +116,8 @@
     <option value="baptism-gender-reveal">BAPTISM / GENDER REVEAL</option>
     <option value="debut-milestone">DEBUT / MILESTONE</option>
     <option value="other">OTHER INQUIRY</option>
-      </select>
+</select>
+    
 
     <label>MESSAGE *</label>
     <textarea id="message" placeholder="Tell us how we can help..." required></textarea>
