@@ -199,14 +199,12 @@ h2 {
     margin-bottom: 20px 30px;
 }
 
-/* Hover boxes font size */
 h3 {
     font-size: 28px;
     color: #FFEDFA;
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* Paragraph font size */
 p {
     font-size: 20px;
     color: #FFEDFA;
@@ -231,7 +229,7 @@ section + section {
 }
 
 
-/* ================= PORTFOLIO IMAGES GRID ================= */
+/* ================= IMAGES ================= */
 .portfolio-section {
     max-width: 1500px;
     margin: 0 auto;
@@ -240,18 +238,19 @@ section + section {
 
 .gallery {
     display: flex;
-    justify-content: center; 
-    gap: 40px;               
-    flex-wrap: wrap;                
+    justify-content: center; /* Centers the 2 bottom cards under the top 3 */
+    gap: 40px;               /* Your original 40px gap */
+    flex-wrap: wrap;         /* Allows items to break into multiple rows */          
     padding: 20px 10px;          
     width: 100%;
 }
 
+/* Base style for smaller image boxes (Your exact original values) */
 .gallery .box {
     position: relative;
-    width: 24%;
+    width: 24%; /* Your original size so they look exactly like your first picture */
     min-width: 220px;
-    height: 280px;
+    height: 280px; /* Your original height */
     overflow: hidden;
     border-radius: 10px;
     border: 1px solid #FFEDFA;
@@ -264,16 +263,18 @@ section + section {
 .gallery .box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Back to your original zoom/fill behavior */
     display: block;
     transition: transform 0.4s ease;
 }
 
+/* Hover Mechanics for Entire Box Element */
 .gallery .box:hover {
     transform: translateY(-8px) scale(1.04); 
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6), 0 0 15px rgba(231, 188, 222, 0.3);
 }
 
+/* Deeper inner-image zoom effect on box hover */
 .gallery .box:hover img {
     transform: scale(1.08);
 }
@@ -541,6 +542,72 @@ footer {
         transform: translateY(-8px); /* yung jump height nya*/
     }
 }
+/* ================= MOBILE PHONES ONLY ================= */
+@media only screen and (max-width: 767px) {
+
+    section {
+        padding: 30px 15px;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin: 20px 10px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .gallery {
+        gap: 20px; 
+        padding: 10px 5px;
+    }
+
+    .gallery .box {
+        width: 100%;     
+        max-width: 340px;  
+        height: 240px;    
+        margin: 0 auto;    
+    }
+
+    .gallery .box img {
+        object-fit: cover;
+    }
+
+    .hero-text h1 {
+        font-size: 50px;
+    }
+
+    .card-container {
+        margin-top: 40px;
+        gap: 20px;
+    }
+
+    .card, .founder {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-center, 
+    .footer-right {
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-bottom-social img {
+        margin-left: 0;
+    }
+}
 
 /* ================= TABLET ONLY (iPad standard) ================= */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -580,13 +647,11 @@ footer {
         text-shadow: 2px 2px 5px #000000;
     }
 
-    /* ================= SECTIONS ================= */
     section {
         padding: 30px 25px;
         text-shadow: 2px 2px 5px #000000;
     }
 
-    /* ================= CARDS ================= */
     .wiw {
         width: 100%;
         max-width: 320px;
@@ -604,7 +669,6 @@ footer {
         font-size: 32px;
     }
 
-    /* ================= FOOTER ================= */
     .footer-content {
         flex-wrap: wrap;
         gap: 25px;
