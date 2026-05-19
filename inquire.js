@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const email = document.getElementById("email");
   const subject = document.getElementById("subject");
   const message = document.getElementById("message");
-
+  const phone = document.getElementById("phone");
+ 
   // =============================
   // NAME: letters only
   // =============================
