@@ -72,6 +72,13 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    if (phone.value.length < 11) {
+  phone.setCustomValidity("Please enter a valid 11-digit phone number.");
+  phone.reportValidity();
+  return;
+}
+phone.setCustomValidity("");
+
     // =============================
     // LOADING STATE
     // =============================
@@ -136,10 +143,4 @@ window.addEventListener("scroll", () => {
  });
 });
 
-if (phone.value.length < 11) {
-  phone.setCustomValidity("Please enter a valid 11-digit phone number.");
-  phone.reportValidity();
-  return;
-}
-phone.setCustomValidity("");
 
