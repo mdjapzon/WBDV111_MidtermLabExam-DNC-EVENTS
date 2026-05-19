@@ -86,14 +86,12 @@
                 </div>
 
                 <!-- PHONE -->
-                <div class="form-group">
-                    <label for="phone">PHONE NUMBER *</label>
-                    <input type="text"
-                        id="phone"
-                        placeholder="09XX-XXX-XXXX"
-                        maxlength="13"
-                        required>
-                </div>
+             <input type="text"
+                    id="phone"
+                    placeholder="Phone Number"
+                    maxlength="11"
+                    required
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
 
                 <!-- EVENT DATE -->
                 <div class="form-group">
