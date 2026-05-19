@@ -181,5 +181,6 @@ const dd   = String(today.getDate()).padStart(2, "0");
 
 dateInput.min = `${yyyy}-${mm}-${dd}`;
 dateInput.max = `${yyyy + 10}-12-31`;
-
+ });
+});
  
